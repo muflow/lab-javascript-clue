@@ -34,32 +34,32 @@ describe('Find a random element of the array - selectRandom', () => {
 });
 
 describe('Pick a random mystery - pickMystery', () => {
-  it('should define pickMystery', () => {
-    expect(typeof pickMystery).toBe('function');
-  });
+it('should define pickMystery', () => {
+expect(typeof pickMystery).toBe('function');
+});
 
-  it('should return an object', () => {
-    expect(Object.prototype.toString.call(pickMystery())).toEqual('[object Object]');
-  });
+it('should return an object', () => {
+expect(Object.prototype.toString.call(pickMystery())).toEqual('[object Object]');
+});
 
-  it('should return an object with 3 properties', () => {
-    expect(Object.keys(pickMystery()).length).toEqual(3);
-  });
+it('should return an object with 3 properties', () => {
+expect(Object.keys(pickMystery()).length).toEqual(3);
+});
 
-  it('should return a suspect in the suspect property of the object', () => {
-    let suspect = JSON.stringify(pickMystery().suspect);
-    expect(suspectsArray.findIndex(el => JSON.stringify(el) === suspect)).toBeGreaterThan(-1);
-  });
+it('should return a suspect in the suspect property of the object', () => {
+let suspect = JSON.stringify(pickMystery().suspect);
+expect(suspectsArray.findIndex(el => JSON.stringify(el) === suspect)).toBeGreaterThan(-1);
+});
 
-  it('should return a weapon in the weapon property of the object', () => {
-    let weapon = JSON.stringify(pickMystery().weapon);
-    expect(weaponsArray.findIndex(el => JSON.stringify(el) === weapon)).toBeGreaterThan(-1);
-  });
+it('should return a weapon in the weapon property of the object', () => {
+let weapon = JSON.stringify(pickMystery().weapon);
+expect(weaponsArray.findIndex(el => JSON.stringify(el) === weapon)).toBeGreaterThan(-1);
+});
 
-  it('should return a room in the room property of the object', () => {
-    let room = JSON.stringify(pickMystery().room);
-    expect(roomsArray.findIndex(el => JSON.stringify(el) === room)).toBeGreaterThan(-1);
-  });
+it('should return a room in the room property of the object', () => {
+let room = JSON.stringify(pickMystery().room);
+expect(roomsArray.findIndex(el => JSON.stringify(el) === room)).toBeGreaterThan(-1);
+});
 });
 
 describe('Reveal the mystery - revealMystery', () => {
